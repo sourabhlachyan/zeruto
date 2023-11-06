@@ -147,7 +147,7 @@ class User extends Component {
         }
         const result = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/signup',
+            url: 'https://zeruto-backend.onrender.com/signup',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         })
@@ -170,7 +170,7 @@ class User extends Component {
         }
         const result = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/login',
+            url: 'https://zeruto-backend.onrender.com/login',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         })

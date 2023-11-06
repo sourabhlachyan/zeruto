@@ -40,7 +40,7 @@ class Filter extends Component {
         // Making api call to fetch the restaurant data based on payload.
         const restuarant = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/filter',
+            url: 'https://zeruto-backend.onrender.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         })
@@ -50,7 +50,7 @@ class Filter extends Component {
         // Making api call for locations data to showing drop-downs filters.
         const locationDD = await axios({
             method: 'GET',
-            url: 'http://localhost:8900/locations',
+            url: 'https://zeruto-backend.onrender.com/locations',
             headers: { 'Content-Type': 'application/json' }
         });
         // Update the location variable in state.
@@ -73,7 +73,7 @@ class Filter extends Component {
         // Making api call to sorting data.
         const restuarant = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/filter',
+            url: 'https://zeruto-backend.onrender.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         })
@@ -98,7 +98,7 @@ class Filter extends Component {
         // making api call to get expected cost based restaurant data.
         const restuarant = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/filter',
+            url: 'https://zeruto-backend.onrender.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         });
@@ -125,7 +125,7 @@ class Filter extends Component {
         // Making the api call to get location based restaurant data.
         const restuarant = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/filter',
+            url: 'https://zeruto-backend.onrender.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         });
@@ -155,7 +155,7 @@ class Filter extends Component {
         // Making the api call to fetch the cuisine based restaurant data.
         const restuarant = await axios({
             method: 'POST',
-            url: 'http://localhost:8900/filter',
+            url: 'https://zeruto-backend.onrender.com/filter',
             headers: { 'Content-Type': 'application/json' },
             data: inputObj
         });

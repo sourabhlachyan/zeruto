@@ -22,7 +22,7 @@ class Homepage extends Component {
         // making api call to fetching the locations data.
         let location = await axios({
             method : 'GET',
-            url : 'http://localhost:8900/locations',
+            url : 'https://zeruto-backend.onrender.com/locations',
             headers : {'content-type' : 'application/json'}
         });
         // update locations variable in state.
@@ -31,7 +31,7 @@ class Homepage extends Component {
         // making another api call to fetching mealtypes data.
         let mealtype = await axios({
             method : 'GET',
-            url : 'http://localhost:8900/mealtypes',
+            url : 'https://zeruto-backend.onrender.com/mealtypes',
             headers: {'content-type':'application/json'}
         });
         //  update mealtypes variable in state.
@@ -39,7 +39,7 @@ class Homepage extends Component {
 
         let restaurants = await axios({
             method: 'GET',
-            url: 'http://localhost:8900/restaurants',
+            url: 'https://zeruto-backend.onrender.com/restaurants',
             headers: {'content-type':'application/json'}
         });
         this.setState({restaurants: restaurants.data});

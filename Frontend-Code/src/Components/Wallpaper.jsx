@@ -19,7 +19,7 @@ class Wallpaper extends Component {
   componentDidMount = async () => {
     const result = await axios({
       method: 'GET',
-      url: 'http://localhost:8900/restaurants',
+      url: 'https://zeruto-backend.onrender.com/restaurants',
       headers: { 'Content-Type': 'application/json' }
     });
     this.setState({ restaurants: result.data });
@@ -31,7 +31,7 @@ class Wallpaper extends Component {
     sessionStorage.setItem("location_id", location_id);
     const result = await axios({
       method: 'GET',
-      url: `http://localhost:8900/locations/${location_id}`,
+      url: `https://zeruto-backend.onrender.com/locations/${location_id}`,
       headers: { 'Content-Type': 'application/json' }
     });
     this.setState({ restaurantList: result.data });

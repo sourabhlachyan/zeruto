@@ -77,7 +77,7 @@ class Detailspage extends Component {
         // API call to fetch the restaurant details.
         const result = await axios({
             method: "GET",
-            url: `http://localhost:8900/restaurants/${restaurant_id}`,
+            url: `https://zeruto-backend.onrender.com/restaurants/${restaurant_id}`,
             headers: { 'Content-Type': 'application/json' }
         })
         this.setState({ restaurant: result.data, restaurant_id });
@@ -113,7 +113,7 @@ class Detailspage extends Component {
         // API call to fetch the restaurant menu details.
         const result = await axios({
             method: 'GET',
-            url: `http://localhost:8900/getmenu/${restaurant_id}`,
+            url: `https://zeruto-backend.onrender.com/getmenu/${restaurant_id}`,
             headers: { 'Content-Type': 'application/json' }
         });
 
@@ -224,7 +224,7 @@ class Detailspage extends Component {
             "Content-Type": "application/json"
         };
         // Make the api call to make payment.
-        return fetch(`http://localhost:8900/payment`, {
+        return fetch(`https://zeruto-backend.onrender.com/payment`, {
             method: "POST",
             headers,
             body: JSON.stringify(body)
